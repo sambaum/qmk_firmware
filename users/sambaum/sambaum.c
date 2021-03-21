@@ -33,8 +33,7 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
 
 
 ///////////////////// Macros BEGIN /////////////////////
-bool is_ALTPG_active = false;    // ADD this near the begining of keymap.c
-uint16_t ALTPG_timer = 0;        // we will be using them soon.
+bool is_ALTPG_active = false;
 
 
 __attribute__ ((weak))
@@ -223,45 +222,45 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
     break;
 
-    case ALTPGUP:
-      if (record->event.pressed) {
-        if (!is_ALTPG_active) {
-          is_ALTPG_active = true;
-          register_code(KC_LALT);
-        }
-        ALTPG_timer = timer_read();
-        register_code(KC_PGUP);
-      } else {
-        unregister_code(KC_PGUP);
-      }
-      break;
+   case ALTPGUP:
+     if (record->event.pressed) {
+       is_ALTPG_active = true;
+       register_code(KC_LALT);
+       register_code(KC_PGUP);
+     } else {
+       unregister_code(KC_PGUP);
+     }
+     break;
 
-    case ALTPGDN:
-      if (record->event.pressed) {
-        if (!is_ALTPG_active) {
-          is_ALTPG_active = true;
-          register_code(KC_LALT);
-        }
-        ALTPG_timer = timer_read();
-        register_code(KC_PGDN);
-      } else {
-        unregister_code(KC_PGDN);
-      }
-      break;
+   case ALTPGDN:
+     if (record->event.pressed) {
+       is_ALTPG_active = true;
+       register_code(KC_LALT);
+       register_code(KC_PGDN);
+     } else {
+       unregister_code(KC_PGDN);
+     }
+     break;
 
-  default:
-    return true;
+   default:
+     return true;
   }
   return true;
 };
 
-void matrix_scan_user(void) {     // The very important timer for ALTPG
-  if (is_ALTPG_active) {
-    if (timer_elapsed(ALTPG_timer) > 1000) {
-      unregister_code(KC_LALT);
-      is_ALTPG_active = false;
-    }
-  }
+void matrix_scan_user(void) {
+
+	uint8_t layer = biton32(layer_state);
+
+	if (is_ALTPG_active) {
+		switch (layer) {
+		case _BASE:
+			unregister_code(KC_LALT);
+			is_ALTPG_active = false;
+			break;
+		}
+	}
+
 }
 
 ///////////////////// Macros END /////////////////////
