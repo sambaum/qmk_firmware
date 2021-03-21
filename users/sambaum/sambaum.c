@@ -253,11 +253,9 @@ void matrix_scan_user(void) {
 	uint8_t layer = biton32(layer_state);
 
 	if (is_ALTPG_active) {
-		switch (layer) {
-		case _BASE:
+		if (layer == _BASE) {
 			unregister_code(KC_LALT);
 			is_ALTPG_active = false;
-			break;
 		}
 	}
 
