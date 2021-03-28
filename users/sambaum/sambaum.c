@@ -33,7 +33,7 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
 
 
 ///////////////////// Macros BEGIN /////////////////////
-bool is_ALTPG_active = false;
+bool is_LALT_active = false;
 
 
 __attribute__ ((weak))
@@ -224,7 +224,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
    case ALTPGUP:
      if (record->event.pressed) {
-       is_ALTPG_active = true;
+       is_LALT_active = true;
        register_code(KC_LALT);
        register_code(KC_PGUP);
      } else {
@@ -234,11 +234,21 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
    case ALTPGDN:
      if (record->event.pressed) {
-       is_ALTPG_active = true;
+       is_LALT_active = true;
        register_code(KC_LALT);
        register_code(KC_PGDN);
      } else {
        unregister_code(KC_PGDN);
+     }
+     break;
+
+   case ALTTAB:
+     if (record->event.pressed) {
+       is_LALT_active = true;
+       register_code(KC_LALT);
+       register_code(KC_TAB);
+     } else {
+       unregister_code(KC_TAB);
      }
      break;
 
@@ -252,10 +262,10 @@ void matrix_scan_user(void) {
 
 	uint8_t layer = biton32(layer_state);
 
-	if (is_ALTPG_active) {
+	if (is_LALT_active) {
 		if (layer == _BASE) {
 			unregister_code(KC_LALT);
-			is_ALTPG_active = false;
+			is_LALT_active = false;
 		}
 	}
 

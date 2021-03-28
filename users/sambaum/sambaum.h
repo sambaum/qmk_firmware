@@ -18,6 +18,7 @@ enum custom_keycodes {
     C_LBRC, // ü
     ALTPGUP,
     ALTPGDN,
+    ALTTAB,
     NEW_SAFE_RANGE  //use "NEW_SAFE_RANGE" for keymap specific codes
 };
 
