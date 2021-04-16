@@ -118,18 +118,21 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       if ((keyboard_report->mods & MOD_BIT (KC_LSFT))) {
         unregister_code(KC_LSFT);
         register_code(KC_RALT);
+        SEND_STRING(SS_DELAY(50)); //RDP
         tap_code(KC_NUBS);
         unregister_code(KC_RALT);
         register_code(KC_LSFT);
       } else if ((keyboard_report->mods & MOD_BIT (KC_RSFT))) {
         unregister_code(KC_RSFT);
         register_code(KC_RALT);
+        SEND_STRING(SS_DELAY(50)); //RDP
         tap_code(KC_NUBS);
         unregister_code(KC_RALT);
         register_code(KC_RSFT);
       }
       else {
       register_code(KC_RALT);
+      SEND_STRING(SS_DELAY(50)); //RDP
       register_code(KC_7);
       }
     } else {
@@ -226,6 +229,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
      if (record->event.pressed) {
        is_LALT_active = true;
        register_code(KC_LALT);
+       SEND_STRING(SS_DELAY(50)); //RDP
        register_code(KC_PGUP);
      } else {
        unregister_code(KC_PGUP);
@@ -236,6 +240,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
      if (record->event.pressed) {
        is_LALT_active = true;
        register_code(KC_LALT);
+       SEND_STRING(SS_DELAY(50)); //RDP
        register_code(KC_PGDN);
      } else {
        unregister_code(KC_PGDN);

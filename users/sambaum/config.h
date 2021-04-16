@@ -25,5 +25,5 @@
 // Required for RSFT
 #define TAPPING_FORCE_HOLD_PER_KEY
 
-// Required for ATEN macro
+// Required for ATEN macro and RDP
 #define TAP_CODE_DELAY 30
