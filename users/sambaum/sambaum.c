@@ -44,7 +44,7 @@ bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
 
-  case C_4:
+  case MA_4:
     if (record->event.pressed) {
       // when keycode is pressed
       if ((keyboard_report->mods & MOD_BIT (KC_LSFT))) {
@@ -65,7 +65,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
     break;
 
-	case C_EQL:
+	case MA_EQL:
 	  if (record->event.pressed) {
 		// when keycode is pressed
 		if ((keyboard_report->mods & MOD_BIT (KC_RALT))) {
@@ -82,7 +82,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	}
 	break;
 
-	case C_MINS:
+	case MA_MINS:
 	  if (record->event.pressed) {
 		// when keycode is pressed
 		if ((keyboard_report->mods & MOD_BIT (KC_RALT))) {
@@ -99,7 +99,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	}
 	break;
 
-  case C_ENT:
+  case MA_ENT:
     if (record->event.pressed) {
       if ((keyboard_report->mods & MOD_BIT (KC_RALT))) {
         register_code(KC_BSLS);
@@ -112,7 +112,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
     break;
 
-  case C_BSLS:
+  case MA_BSLS:
     if (record->event.pressed) {
       // when keycode is pressed
       if ((keyboard_report->mods & MOD_BIT (KC_LSFT))) {
@@ -143,7 +143,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     break;
 
   // ö
-  case C_SCLN:
+  case MA_SCLN:
     if (record->event.pressed) {
       // when keycode is pressed
       if ((keyboard_report->mods & MOD_BIT (KC_LSFT))) {
@@ -167,7 +167,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     break;
 
   // ä
-  case C_QUOT:
+  case MA_QUOT:
     if (record->event.pressed) {
       // when keycode is pressed
       if ((keyboard_report->mods & MOD_BIT (KC_LSFT))) {
@@ -191,7 +191,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     break;
 
   // ü
-  case C_LBRC:
+  case MA_LBRC:
     if (record->event.pressed) {
       // when keycode is pressed
       if ((keyboard_report->mods & MOD_BIT (KC_LSFT))) {

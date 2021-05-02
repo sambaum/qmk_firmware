@@ -8,14 +8,14 @@
 enum custom_keycodes {
     ATEN = SAFE_RANGE,
     DOLLAR,
-    C_4,
-    C_ENT, // used for } on ANSI board
-    C_BSLS,
-    C_EQL,
-    C_MINS,
-    C_SCLN, // ö
-    C_QUOT, // ä
-    C_LBRC, // ü
+    MA_4,
+    MA_ENT, // used for } on ANSI board
+    MA_BSLS,
+    MA_EQL,
+    MA_MINS,
+    MA_SCLN, // ö
+    MA_QUOT, // ä
+    MA_LBRC, // ü
     ALTPGUP,
     ALTPGDN,
     ALTTAB,

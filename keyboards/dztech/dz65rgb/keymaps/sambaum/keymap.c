@@ -5,10 +5,10 @@
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT_65_ansi(
-        KC_GESC,             KC_1,    KC_2,     KC_3,    C_4,     KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    C_MINS,  C_EQL,   KC_BSPC, KC_DEL,
-        LT(_TABFN, KC_TAB),  LT_Q,    LT_W,     KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    C_LBRC,  KC_RBRC, C_BSLS,  KC_PSCR,
-        KC_LCTL,             KC_A,    KC_S,     KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    C_SCLN,  C_QUOT,           C_ENT,   KC_PGUP,
-        KC_LSFT,                      LT_Z,     KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT, KC_UP,   KC_PGDN,
+        KC_GESC,             KC_1,    KC_2,     KC_3,    MA_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    MA_MINS, MA_EQL,  KC_BSPC, KC_DEL,
+        LT(_TABFN, KC_TAB),  LT_Q,    LT_W,     KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    MA_LBRC, KC_RBRC, MA_BSLS, KC_PSCR,
+        KC_LCTL,             KC_A,    KC_S,     KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    MA_SCLN, MA_QUOT,          MA_ENT,  KC_PGUP,
+        KC_LSFT,             LT_Z,    KC_X,     KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT, KC_UP,   KC_PGDN,
         LCTL_T(KC_CAPS),     KC_LGUI, KC_LALT,                             LT(_SPACEFN, KC_SPC),      KC_RALT, MO(_FN), MO(_SFN),KC_LEFT, KC_DOWN, KC_RGHT
     ),
 
