@@ -42,11 +42,28 @@ __attribute__((weak)) layer_state_t layer_state_set_user(layer_state_t state) {
     uint8_t G = 0;
     uint8_t B = 0;
     if (state & (1UL << 1)) {
-        R = 255;
-        B = 255;
+        G = 255;
     }
     if (state & (1UL << 2)) {
         G = 255;
+    }
+    if (state & (1UL << 3)) {
+        G = 255;
+    }
+    if (state & (1UL << 5)) {
+        R = 255;
+        B = 255;
+    }
+    if (state & (1UL << 6)) {
+        B = 255;
+    }
+    if (state & (1UL << 7)) {
+        R = 255;
+        B = 255;
+    }
+    if (state & (1UL << 8)) {
+        R = 255;
+        B = 255;
     }
 
     IS31FL3733_set_color( 6+64-1, R, G, B );
