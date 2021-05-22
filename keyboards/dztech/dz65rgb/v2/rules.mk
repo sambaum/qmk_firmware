@@ -32,5 +32,3 @@ RGB_MATRIX_ENABLE = yes        # Use RGB matrix
 RGB_MATRIX_DRIVER = IS31FL3731
 
 LAYOUTS = 65_ansi
-
-LTO_ENABLE = yes
