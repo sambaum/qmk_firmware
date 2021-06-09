@@ -61,3 +61,17 @@ enum custom_keycodes {
 #define RSBR RALT(KC_RBRC)
 #define LABK KC_NUBS
 #define RABK LSFT(KC_NUBS)
+// Windows
+#define LGUI1 LGUI(KC_1)
+#define LGUI2 LGUI(KC_2)
+#define LGUI3 LGUI(KC_3)
+#define LGUI4 LGUI(KC_4)
+#define LGUI5 LGUI(KC_5)
+#define LGUI6 LGUI(KC_6)
+#define LGUI7 LGUI(KC_7)
+#define LGUI8 LGUI(KC_8)
+#define LGUI9 LGUI(KC_9)
+#define VDNEW C(G(KC_D))
+#define VDLEFT C(G(KC_LEFT))
+#define VDRGHT C(G(KC_RGHT))
+#define VDREM C(G(KC_F4))

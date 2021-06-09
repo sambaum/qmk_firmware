@@ -21,9 +21,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [_TABFN] = LAYOUT_65_ansi(
-        LOCK,                KC_SLEP, _______,  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+        LOCK,                LGUI1,   LGUI2,    LGUI3,   LGUI4,   LGUI5,   LGUI6,   LGUI7,   LGUI8,   LGUI9,   _______, _______, _______, _______, _______,
         _______,             KC_CAPS, _______,  _______, _______, _______, _______, EN_U,    KC_UP  , EN_O,    EN_P,    _______, _______, _______, _______,
-        _______,             _______, _______,  _______, _______, _______, _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______,          _______, _______,
+        _______,             _______, KC_SLEP,  _______, _______, _______, _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______,          _______, _______,
         _______,                      _______,  _______, _______, AHKTYPE, _______, _______, _______, _______, _______, _______, _______, _______, _______,
         _______,             _______, _______,                             _______,                   _______, _______, _______, _______, _______, _______
     ),
@@ -32,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         RESET,               _______, _______,  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_SLCK,
         _______,             RGB_TOG, RGB_MOD,  RGB_HUI, RGB_VAI, RGB_SAI, _______, _______, _______, _______, _______, _______, _______, _______, KC_NLCK,
         _______,             RGB_M_P, RGB_RMOD, RGB_HUD, RGB_VAD, RGB_SAD, _______, _______, _______, _______, _______, _______,          _______, KC_PAUS,
-        _______,                      KC_SLEP,  _______, _______, _______, _______, _______, _______, _______, ATEN,    _______, _______, _______, TG(_GAMING),
+        _______,                      _______,  _______, _______, _______, _______, _______, _______, _______, ATEN,    _______, _______, _______, TG(_GAMING),
         _______,             _______, _______,                             _______,                   _______, _______, _______, _______, _______, _______
     ),
 
@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,             XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______,
         _______,             XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LSBR,    RSBR,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
         _______,             XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LCBR,    RCBR,    XXXXXXX, XXXXXXX, XXXXXXX,          _______, _______,
-        _______,                      XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LABK,    RABK,    XXXXXXX, XXXXXXX, _______, _______, _______,
+        _______,                      XXXXXXX,  VDNEW,   VDLEFT,  VDRGHT,  VDREM,   XXXXXXX, LABK,    RABK,    XXXXXXX, XXXXXXX, _______, _______, _______,
         _______,             _______, _______,                             XXXXXXX,                   _______, _______, _______, _______, _______, _______
     ),
 
