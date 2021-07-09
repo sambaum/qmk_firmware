@@ -40,8 +40,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TG(_NUM),            XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______,
         _______,             XXXXXXX, MO(_SCR), XXXXXXX, XXXXXXX, XXXXXXX, DIVIDE,  KC_7,    KC_8,    KC_9,    MINUS,   XXXXXXX, XXXXXXX, TG(_NUM),_______,
         _______,             XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, MULPLY,  KC_4,    KC_5,    KC_6,    PLUS,    COLON,            _______, _______,
-        _______,                      XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_1,    KC_2,    KC_3,    KC_DOT,  _______, _______, _______,
-        _______,             _______, KC_SPC,                              KC_0,                      _______, _______, _______, _______, _______, _______
+        _______,                      XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_SPC,  KC_1,    KC_2,    KC_3,    KC_DOT,  _______, _______, _______,
+        _______,             _______, _______,                             KC_0,                      _______, _______, _______, _______, _______, _______
     ),
 
     [_SPECCHAR] = LAYOUT_65_ansi(
